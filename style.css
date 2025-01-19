@@ -6,6 +6,7 @@
     font-family: "Source Code Pro", serif;
 
 }
+
 a,
 a:visited,
 a:active,
@@ -13,6 +14,7 @@ button {
     color: inherit;
     border: inherit;
 }
+
 header {
     width: 100%;
     height: 5rem;
@@ -26,49 +28,59 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     color: #333333;
-    box-shadow:0 .5px 10px 1px rgb(192, 192, 192);
+    box-shadow: 0 .5px 10px 1px rgb(192, 192, 192);
 }
+
 header nav {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     width: 25%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .logo img {
     width: 50px;
     transform: scaleX(-1);
 }
+
 .navbar {
     width: 45%;
 }
+
 .navbar ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
+
 .navbar ul li:hover {
     color: #fc9f00;
     cursor: pointer;
 }
+
 #bars {
     display: none;
 }
+
 .bgVideo {
     width: 100%;
     height: 100vh;
 }
+
 video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .hero {
     width: 100%;
     height: 100vh;
@@ -80,6 +92,7 @@ video {
     position: absolute;
     top: 0;
 }
+
 .hero>.main {
     width: 90%;
     display: flex;
@@ -87,15 +100,18 @@ video {
     align-items: center;
     flex-direction: column;
 }
+
 .main h1 {
     font-weight: 1000;
     letter-spacing: 3px;
     font-size: 3.2rem;
     margin-bottom: 20px;
 }
+
 .main p {
     margin-bottom: 40px;
 }
+
 .main>button {
     width: 25%;
     height: 40px;
@@ -108,6 +124,7 @@ video {
     font-size: 1.1rem;
     font-weight: bolder;
 }
+
 .links {
     width: 25%;
     display: flex;
@@ -115,6 +132,7 @@ video {
     align-items: center;
     margin-bottom: 25px;
 }
+
 .links>button {
     border: 1px solid rgb(0, 0, 0);
     border-radius: 100%;
@@ -124,43 +142,49 @@ video {
     height: 45px;
     width: 45px;
 }
+
 .links>button:hover {
     border: 1px solid #fc9f00;
     transform: scaleX(-1);
 }
 
-.about{
+.about {
     width: 100%;
     background-color: #F5F5F5;
     padding-top: 25px;
+    padding-bottom: 50px;
 }
-.about-wrap{
+
+.about-wrap {
     width: 80%;
     margin: auto;
     text-align: center;
 }
-.about-wrap > p{
+
+.about-wrap>p {
     margin-top: 40px;
     text-align: left;
 }
-.about-wrap > h1{
+
+.about-wrap>h1 {
     font-size: 2rem;
     text-transform: uppercase;
 }
+
 .timeline {
     width: 60%;
     margin: 50px auto;
     position: relative;
-  }
-  
-  .timeline-item {
+}
+
+.timeline-item {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     position: relative;
-  }
-  
-  .timeline-icon {
+}
+
+.timeline-icon {
     width: 30px;
     height: 30px;
     background-color: #555555;
@@ -174,29 +198,29 @@ video {
     left: -45px;
     top: -30px;
 
-  }
-  
-  .timeline-content {
+}
+
+.timeline-content {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 80%;
     margin-left: 0px;
-  }
-  
-  .timeline-content h3 {
+}
+
+.timeline-content h3 {
     margin-top: 0;
     color: #fc9f00;
-  }
-  
-  .timeline-content p {
+}
+
+.timeline-content p {
     margin: 0;
     font-size: 14px;
     color: #555;
-  }
-  
-  .timeline-item::before {
+}
+
+.timeline-item::before {
     content: "";
     position: absolute;
     left: -30px;
@@ -204,9 +228,64 @@ video {
     height: 100%;
     width: 2px;
     background-color: #fc9f00;
-  }
+}
+.skill-head{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.skills{
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+.skills .skill-slider{
+    width: 100%;
+    animation: scroll 10s infinite linear;
+    margin-left: 0px;
+}
+.skills .skill-slider > button{
+    font-size: 1.1rem;
+    width:auto;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+.skill-slider:hover{
+    animation-play-state: paused;
+}
+.skills::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 50px;
+    height: 100%;
+    background:linear-gradient(to left, rgba(255,255,255,0) ,#F5F5F5);
+    z-index: 2;
+}
+.skills::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 100px;
+    height: 100%;
+    background:linear-gradient(to right, rgba(255,255,255,0) ,#F5F5F5);
+    z-index: 2;
+}
 
-
+@keyframes scroll {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
 
 
 
@@ -256,5 +335,5 @@ video {
     .main>button {
         width: 35%;
     }
-    
+
 }
