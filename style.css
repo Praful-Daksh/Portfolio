@@ -6,6 +6,7 @@
     font-family: "Source Code Pro", serif;
 
 }
+
 a,
 a:visited,
 a:active,
@@ -14,9 +15,11 @@ button {
     border: inherit;
     text-decoration: none;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 header {
     width: 100%;
     height: 5rem;
@@ -41,15 +44,16 @@ header nav {
 }
 
 .logo {
-    width: 25%;
+    width: 35%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .logo img {
     width: 50px;
     transform: scaleX(-1);
+    margin-right: 5px;
 }
 
 .navbar {
@@ -232,11 +236,13 @@ video {
     width: 2px;
     background-color: #fc9f00;
 }
-.skill-head{
+
+.skill-head {
     text-align: center;
     margin-bottom: 25px;
 }
-.skills{
+
+.skills {
     width: 80%;
     height: fit-content;
     margin: auto;
@@ -244,75 +250,85 @@ video {
     white-space: nowrap;
     position: relative;
 }
-.skills .skill-slider{
+
+.skills .skill-slider {
     width: 100%;
     animation: scroll 15s infinite linear;
     margin-left: 0px;
 }
-.skills .skill-slider > button{
+
+.skills .skill-slider>button {
     font-size: 1.1rem;
-    width:auto;
+    width: auto;
     padding: 8px;
     border: 1px solid black;
     border-radius: 4px;
     margin: 0 5px;
 }
-.skill-slider:hover{
+
+.skill-slider:hover {
     animation-play-state: paused;
 }
-.skills::before{
+
+.skills::before {
     position: absolute;
     top: 0;
     left: 0;
     content: "";
     width: 25px;
     height: 100%;
-    background:linear-gradient(to left, rgba(255,255,255,0) ,#F5F5F5);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #F5F5F5);
     z-index: 2;
 }
-.skills::after{
+
+.skills::after {
     position: absolute;
     top: 0;
     right: 0;
     content: "";
     width: 25px;
     height: 100%;
-    background:linear-gradient(to right, rgba(255,255,255,0) ,#F5F5F5);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #F5F5F5);
     z-index: 2;
 }
 
 @keyframes scroll {
-    from{
+    from {
         transform: translate(0);
     }
-    to{
+
+    to {
         transform: translate(-100%);
     }
 }
 
-.projects{
+.projects {
     width: 100%;
     text-align: center;
-    padding:100px 0px;
+    padding: 100px 0px;
     background-color: #faf9f9;
 }
-.projects > h1{
+
+.projects>h1 {
     width: fit-content;
     margin: 0px auto 40px auto;
     text-transform: uppercase;
     border-bottom: 2px solid #fc9f00;
 }
-.projects-wrap{
+
+.projects-wrap {
     width: 80%;
     margin: auto;
 }
-.project{
+
+.project {
     width: 100%;
     height: 70vh;
     position: relative;
     margin-bottom: 40px;
     border-radius: 12px;
 }
+
 .project::before {
     content: '';
     position: absolute;
@@ -321,10 +337,12 @@ video {
     right: 0;
     bottom: 0;
     border-radius: inherit;
-    background: rgba(0, 0, 0, 0.2); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.2);
+    /* Dark overlay */
     z-index: 1;
-  }
-.project-info{
+}
+
+.project-info {
     position: absolute;
     left: 30px;
     bottom: 30px;
@@ -337,7 +355,8 @@ video {
     z-index: 2;
     backdrop-filter: blur(5px);
 }
-.project-info > button {
+
+.project-info>a {
     padding: 8px 35px;
     font-size: .8rem;
     border-radius: 3px;
@@ -345,36 +364,53 @@ video {
     background-color: transparent;
     border: .2px solid rgb(145, 145, 145);
     color: white;
+    transition: .25s ease;
+    cursor: pointer;
 }
-.project-info > p{
+
+.project-info>a:hover {
+    background-color: #fc9f00;
+}
+
+.project-info>p {
     margin-bottom: 15px;
     color: #E0F1FB;
 }
-.project-info > h1{
+
+.project-info>h1 {
     margin-bottom: 15px;
     color: white;
 }
-.project1{
-    background:url('tic.png');
+
+.project1 {
+    background: url('tic.png');
     background-size: cover;
+    background-position: center;
 }
-.project2{
-    background:url('typing.png');
-    background-size: cover;
-}
-.project3{
-    background:url('quiz.png');
-    background-size: cover;
-}
-.project4{
-    background:url('styledg.png');
-    background-size: cover;
-}
-.project5{
-    background:url('showtime.png');
+
+.project2 {
+    background: url('typing.png');
+    background-position: center;
     background-size: cover;
 }
 
+.project3 {
+    background: url('quiz.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.project4 {
+    background: url('styledg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.project5 {
+    background: url('showtime.png');
+    background-position: center;
+    background-size: cover;
+}
 
 
 
@@ -382,7 +418,8 @@ video {
 
 
 
-@media only screen and (max-width:650px) {
+
+@media only screen and (max-width:630px) {
     #bars {
         display: block;
         font-size: 1.1rem;
@@ -425,4 +462,34 @@ video {
         width: 35%;
     }
 
+
+    .project {
+        height: 30vh;
+    }
+
+    .project-info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: fit-content;
+        width: fit-content;
+        padding: 15px;
+    }
+}
+@media (max-width:800px) {
+    
+    .project {
+        height: 45vh;
+        justify-content: flex-start;
+    }
+    .project-info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: fit-content;
+        width: fit-content;
+        padding: 15px;
+    }
 }
