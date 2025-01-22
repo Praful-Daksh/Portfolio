@@ -355,23 +355,23 @@ video {
     color: white;
 }
 .project1{
-    background:url('/media/tic.png');
+    background:url('/tic.png');
     background-size: cover;
 }
 .project2{
-    background:url('/media/typing.png');
+    background:url('/typing.png');
     background-size: cover;
 }
 .project3{
-    background:url('/media/quiz.png');
+    background:url('/quiz.png');
     background-size: cover;
 }
 .project4{
-    background:url('/media/styledg.png');
+    background:url('/styledg.png');
     background-size: cover;
 }
 .project5{
-    background:url('/media/showtime.png');
+    background:url('/showtime.png');
     background-size: cover;
 }
 
