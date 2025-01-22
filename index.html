@@ -13,15 +13,15 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="profile.png">
+                <img src="/media/profile.png">
                 <h3>PRAFUL DAKSH</h3>
             </div>
             <div class="navbar">
                 <ul id="nav-links">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <button class="fa-solid fa-bars" id="bars"></button>
             </div>
@@ -29,10 +29,10 @@
     </header>
     <section class="bgVideo">
         <video autoplay muted loop>
-            <source src="bg.mp4">
+            <source src="/media/bg.mp4">
         </video>
     </section>
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="main">
             <h1>HEY, I'M PRAFUL DAKSH</h1>
             <p>
@@ -40,15 +40,15 @@
                 with collaborative environments where my skills as a full stack developer can be honed.
             </p>
             <div class="links">
-                <button class="fa-brands fa-linkedin"></button>
-                <button class="fa-brands fa-github"></button>
-                <button class="fa-solid fa-code"></button>
-                <button class="fa-solid fa-envelope"></button>
+                <a href="https://www.linkedin.com/in/praful-daksh-30868b2b6/" target="_self"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Praful-Daksh" target="_self"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/prafuldaksh/" target="_self"><i class="fa-solid fa-code"></i></a>
+                <a href="mailto:prafuldaksh@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <button>resume </button>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-wrap">
             <h1> About Me</h1>
             <p>I am Praful-a passionate BCA student pursuing my career in web development. I have a strong background in
@@ -89,7 +89,9 @@
                 </div>
             </div>
         </div>
-<div class="skill-head"><h1>My Skills</h1></div>
+        <div class="skill-head">
+            <h1>My Skills</h1>
+        </div>
         <div class="skills">
             <div class="skill-slider">
                 <button class="slider-item">HTML</button>
@@ -101,19 +103,60 @@
                 <button class="slider-item">Node.js</button>
                 <button class="slider-item">Express.js</button>
                 <button class="slider-item">MongoDB</button>
+                <button class="slider-item">Git</button>
+                <button class="slider-item">GitHub</button>
             </div>
         </div>
-        
+    </section>
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="projects-wrap">
+            <div class="project1 project">
+                <div class="project-info">
+                    <h1>Tic Tac Toe</h1>
+                    <p>A event Managment site with the features to publish, organise and manage events.</p>
+                    <button>View Project</button>
+                </div>
+            </div>
+            <div class="project2 project">
+                <div class="project-info">
+                    <h1>Typing Test</h1>
+                    <p>A event Managment site with the features to publish, organise and manage events.</p>
+                    <button>View Project</button>
+                </div>
+            </div>
+            <div class="project3 project">
+                <div class="project-info">
+                    <h1>Quiz</h1>
+                    <p>A event Managment site with the features to publish, organise and manage events.</p>
+                    <button>View Project</button>
+                </div>
+            </div>
+            <div class="project4 project">
+                <div class="project-info">
+                    <h1>E Commerce Web</h1>
+                    <p>A event Managment site with the features to publish, organise and manage events.</p>
+                    <button>View Project</button>
+                </div>
+            </div>
+            <div class="project5 project">
+                <div class="project-info">
+                    <h1>Event Managment</h1>
+                    <p>A event Managment site with the features to publish, organise and manage events.</p>
+                    <button>View Project</button>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 <script>
-const carousel = document.querySelector('.skill-slider');
-const items = document.querySelectorAll('.slider-item');
+    const carousel = document.querySelector('.skill-slider');
+    const items = document.querySelectorAll('.slider-item');
 
-items.forEach(item => {
-    const clone = item.cloneNode(true);
-    carousel.appendChild(clone);
-});
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+    });
 
 </script>
 
