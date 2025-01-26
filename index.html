@@ -63,7 +63,7 @@
                 <a href="https://leetcode.com/u/prafuldaksh/" target="_self"><i class="fa-solid fa-code"></i></a>
                 <a href="mailto:prafuldaksh@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <button>resume </button>
+            <button id="downloadButton" title="Download Resume">resume </button>
         </div>
     </section>
     <section class="about" id="about">
@@ -243,6 +243,15 @@
     if (!sideBar.contains(e.target) && e.target !== toggleBtn) {
         closeSidebar();
     }
+
+
+    document.getElementById("downloadButton").addEventListener("click", function() {
+            const fileUrl = "./Praful-Resume.pdf";  // Replace with the actual file URL
+            const a = document.createElement("a");
+            a.href = fileUrl;
+            a.download = fileUrl.split('/').pop();  // This will set the download file name to the file's name
+            a.click();
+        });
 })
 
    
