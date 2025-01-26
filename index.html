@@ -23,7 +23,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="fa-solid fa-bars" id="bars"></button>
+                <button class="fa-solid fa-bars" id="bars" ></button>
             </div>
         </nav>
     </header>
@@ -31,6 +31,23 @@
         <video autoplay muted loop>
             <source src="bg.mp4">
         </video>
+    </section>
+    <section class="menu">
+        <div class="menu-wrap">
+            <ul class="sidebarLinks">
+                <li class="sidebar-item"><i class="fa fa-home"></i><a href="#home">Home</a></li>
+                <li class="sidebar-item"><i class="fa fa-id-card"></i><a href="#about">About</a></li>
+                <li class="sidebar-item"><i class="fa fa-cubes-stacked"></i><a href="#projects">Projects</a></li>
+                <li class="sidebar-item"><i class="fa fa-phone"></i><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="side-footer">
+                <div class="logo">
+                    <img src="profile.png">
+                    <h3>PRAFUL DAKSH</h3>
+                </div>
+            </div>
+        </div>
+
     </section>
     <section class="hero" id="home">
         <div class="main">
@@ -192,7 +209,7 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 <script>
     const carousel = document.querySelector('.skill-slider');
@@ -202,7 +219,33 @@
         const clone = item.cloneNode(true);
         carousel.appendChild(clone);
     });
+    const sideBar = document.querySelector('.menu');
+    const sidebarItem = document.querySelectorAll('.sidebar-item');
+    const toggleBtn = document.getElementById('bars');
+    const web = document.querySelector('html');
 
+    toggleBtn.addEventListener('click',sidebar);
+    function sidebar() {
+        sideBar.style.right = 0;
+        web.style.overflowY = "hidden";
+    }
+    function closeSidebar(){
+        sideBar.style.right = '-100%';
+        web.style.overflowY = "scroll";
+    }
+    
+    sidebarItem.forEach(item =>{
+        item.addEventListener('click',()=>{
+            closeSidebar();
+        })
+    })
+    document.addEventListener('click', (e) => {
+    if (!sideBar.contains(e.target) && e.target !== toggleBtn) {
+        closeSidebar();
+    }
+})
+
+   
 </script>
 
 </html>
