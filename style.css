@@ -6,7 +6,7 @@
     font-family: "Source Code Pro", serif;
 
 }
-p::selection,h1::selection,h2::selection,h3::selection,a::selection,label::selection{
+p::selection,h1::selection,h2::selection,h3::selection,a::selection,label::selection,button::selection{
     background-color: #ebab3e;
     color: white;
 }
