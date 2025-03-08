@@ -4,9 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praful Daksh</title>
+    <title>Praful Daksh | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta name="google-site-verification" content="qsHB12s8tZ16l-BKiNRBNxCO8jCqr8VCDw03Wb6590A" />
+    <meta name="keywords"
+        content="praful-daksh, Praful Daksh , web devloper, portfolio, praful portfolio, full stack devloper, full stack, devloper, html , css,js , node, project, bca student ">
+    <meta name="description"
+        content="Hey I am Praful Daksh, currently pursuing bca ,leaning towards web devloper with current skillset(html,css, js , node, express, mongo ) i made some projects and i am seeking intenship opportunites to gain hands-on experience.">
+    <meta property="og:title" content="Praful Daksh | Personal Portfolio">
+    <meta property="og:description"
+        content="Explore the work and projects of Praful Daksh, a passionate web developer.">
+    <meta property="og:image" content="profile.png">
+    <meta property="og:url" content="https://prafuldaksh.vercel.app">
+    <meta itemprop="name" content="Praful Daksh | Portfolio">
+    <meta itemprop="description" content="Check out Praful's Portfolio Website , a aspiring Web devloper.">
+    <meta itemprop="image" content="profile.png">
+    <link rel="icon" href="profile.png">
 </head>
 
 <body>
@@ -23,7 +37,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="fa-solid fa-bars" id="bars" ></button>
+                <button class="fa-solid fa-bars" id="bars"></button>
             </div>
         </nav>
     </header>
@@ -59,9 +73,12 @@
             <div class="links">
                 <a href="https://www.linkedin.com/in/praful-daksh-30868b2b6/" target="_self"><i
                         class="fa-brands fa-linkedin" title="LinkedIn"></i></a>
-                <a href="https://github.com/Praful-Daksh" target="_self" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://leetcode.com/u/prafuldaksh/" target="_self" title="LeetCode"><i class="fa-solid fa-code"></i></a>
-                <a href="mailto:prafuldaksh@gmail.com" target="_blank" title="Mail"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Praful-Daksh" target="_self" title="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/prafuldaksh/" target="_self" title="LeetCode"><i
+                        class="fa-solid fa-code"></i></a>
+                <a href="mailto:prafuldaksh@gmail.com" target="_blank" title="Mail"><i
+                        class="fa-solid fa-envelope"></i></a>
             </div>
             <button id="downloadButton" title="Download Resume">resume </button>
         </div>
@@ -224,37 +241,37 @@
     const toggleBtn = document.getElementById('bars');
     const web = document.querySelector('html');
 
-    toggleBtn.addEventListener('click',sidebar);
+    toggleBtn.addEventListener('click', sidebar);
     function sidebar() {
         sideBar.style.right = 0;
         web.style.overflowY = "hidden";
     }
-    function closeSidebar(){
+    function closeSidebar() {
         sideBar.style.right = '-100%';
         web.style.overflowY = "scroll";
     }
-    
-    sidebarItem.forEach(item =>{
-        item.addEventListener('click',()=>{
+
+    sidebarItem.forEach(item => {
+        item.addEventListener('click', () => {
             closeSidebar();
         })
     })
     document.addEventListener('click', (e) => {
-    if (!sideBar.contains(e.target) && e.target !== toggleBtn) {
-        closeSidebar();
-    }
+        if (!sideBar.contains(e.target) && e.target !== toggleBtn) {
+            closeSidebar();
+        }
 
 
-    document.getElementById("downloadButton").addEventListener("click", function() {
+        document.getElementById("downloadButton").addEventListener("click", function () {
             const fileUrl = "./Praful-Resume.pdf";  // Replace with the actual file URL
             const a = document.createElement("a");
             a.href = fileUrl;
             a.download = fileUrl.split('/').pop();  // This will set the download file name to the file's name
             a.click();
         });
-})
+    })
 
-   
+
 </script>
 
 </html>
