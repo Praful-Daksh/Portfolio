@@ -561,8 +561,16 @@ video {
     border: none;
   }
 
+.online-stats{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-@media only screen and (max-width:630px) {
+
+@media (max-width:600px) {
     #bars {
         display: block;
         font-size: 1.1rem;
@@ -619,6 +627,12 @@ video {
         width: fit-content;
         padding: 15px;
     }
+    .online-stats img{
+    width:calc(100vw - 15px);
+    margin-bottom: 2.5px;
+    margin-top: 2.5px;
+    }
+
 }
 @media (max-width:800px) {
     
@@ -635,4 +649,5 @@ video {
         width: fit-content;
         padding: 15px;
     }
+        
 }
