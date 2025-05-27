@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praful Daksh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <meta name="google-site-verification" content="qsHB12s8tZ16l-BKiNRBNxCO8jCqr8VCDw03Wb6590A" />
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <meta name="keywords"
-        content="praful-daksh, Praful Daksh , web devloper, portfolio, praful portfolio, full stack devloper, full stack, devloper, html , css,js , node, project, bca student ">
+        content="praful-daksh, Praful Daksh , web devloper, portfolio, praful portfolio, full stack devloper, full stack, devloper, html , css,js , node, project, bca student">
     <meta name="description"
-        content="Hey I am Praful Daksh, currently pursuing bca ,leaning towards web devloper with current skillset(html,css, js , node, express, mongo ) i made some projects and i am seeking intenship opportunites to gain hands-on experience.">
-    <meta property="og:title" content="Praful Daksh | Personal Portfolio">
+        content="Praful Daksh - Passionate BCA student and full-stack web developer specializing in modern web technologies. Explore my projects and get in touch for collaboration opportunities.">
+    <meta property="og:title" content="Praful Daksh | Portfolio">
     <meta property="og:description"
-        content="Explore the work and projects of Praful Daksh, a passionate web developer.">
-    <meta property="og:image" content="profile.png">
+        content="Explore the work and projects of Praful Daksh, a passionate web developer and BCA student.">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://prafuldaksh.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-site-verification" content="qsHB12s8tZ16l-BKiNRBNxCO8jCqr8VCDw03Wb6590A" />
     <meta itemprop="name" content="Praful Daksh | Portfolio">
     <meta itemprop="description" content="Check out Praful's Portfolio Website , a aspiring Web devloper.">
     <meta itemprop="image" content="profile.png">
@@ -24,260 +30,546 @@
     <link rel="icon" href="profile.png">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5459889047648134"
         crossorigin="anonymous"></script>
+    <link rel="icon" href="profile.png">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="profile.png">
-                <h3>PRAFUL DAKSH</h3>
-            </div>
-            <div class="navbar">
-                <ul id="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+<body class="bg-gray-50">
+    <nav class="fixed top-0 w-full bg-white bg-opacity-50 backdrop-blur-md shadow-sm z-50" role="navigation"
+        aria-label="Main navigation">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="profile.png" alt="Praful Daksh Profile Picture"
+                        class="w-10 h-10 rounded-full shadow-md object-cover">
+                    <h2 class="text-xl font-bold text-gray-800">PRAFUL DAKSH</h2>
+                </div>
+
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home"
+                            class="text-gray-700 hover:text-yellow-600 transition-colors duration-300 font-medium">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            class="text-gray-700 hover:text-yellow-600 transition-colors duration-300 font-medium">About</a>
+                    </li>
+                    <li><a href="#projects"
+                            class="text-gray-700 hover:text-yellow-600 transition-colors duration-300 font-medium">Projects</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-gray-700 hover:text-yellow-600 transition-colors duration-300 font-medium">Contact</a>
+                    </li>
                 </ul>
-                <button class="fa-solid fa-bars" id="bars"></button>
+
+                <button
+                    class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 p-2 rounded"
+                    onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-        </nav>
-    </header>
-    <section class="bgVideo">
-        <video autoplay muted loop>
-            <source src="bg.mp4">
+        </div>
+
+        <div id="mobileMenu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl mobile-menu md:hidden z-50">
+            <div class="p-6 h-full flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-xl font-bold text-gray-800">Menu</h3>
+                        <button onclick="toggleMobileMenu()"
+                            class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-label="Close mobile menu">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <ul class="space-y-6">
+                        <li><a href="#home" class="block text-gray-700 hover:text-blue-600 transition text-lg"
+                                onclick="toggleMobileMenu()"><i class="fas fa-home mr-3"></i>Home</a></li>
+                        <li><a href="#about" class="block text-gray-700 hover:text-blue-600 transition text-lg"
+                                onclick="toggleMobileMenu()"><i class="fas fa-user mr-3"></i>About</a></li>
+                        <li><a href="#projects" class="block text-gray-700 hover:text-blue-600 transition text-lg"
+                                onclick="toggleMobileMenu()"><i class="fas fa-code mr-3"></i>Projects</a></li>
+                        <li><a href="#contact" class="block text-gray-700 hover:text-blue-600 transition text-lg"
+                                onclick="toggleMobileMenu()"><i class="fas fa-envelope mr-3"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="border-t pt-6 mt-6 flex items-center space-x-3">
+                    <img src="profile.png" alt="Profile" class="w-10 h-10 rounded-full object-cover shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800">PRAFUL DAKSH</h3>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-container" id="home">
+        <video class="hero-video" autoplay muted loop playsinline webkit-playsinline>
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-main animate-fade-up">
+                <h1 class="hero-title">HEY, I'M PRAFUL DAKSH</h1>
+                <p class="hero-description">
+                    I am eager to contribute to innovative projects
+                    with collaborative environments where my skills as a full stack developer can be honed.
+                </p>
+                <div class="flex justify-center space-x-6 mb-10 animate-slide-left">
+                    <a href="https://www.linkedin.com/in/praful-daksh-30868b2b6/" target="_blank"
+                        class="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+                        aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/Praful-Daksh" target="_blank"
+                        class="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300 transform hover:scale-110"
+                        aria-label="GitHub Profile">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://codolio.com/profile/praful" target="_blank"
+                        class="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+                        aria-label="Coding Profile">
+                        <i class="fas fa-code text-xl"></i>
+                    </a>
+                    <a href="mailto:prafuldaksh@gmail.com"
+                        class="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+                        aria-label="Send Email">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+                <button id="downloadButton" class="hero-button animate-slide-right inline-flex items-center space-x-2"
+                    title="Download Resume" aria-label="Download Resume">
+                    <i class="fas fa-download"></i>
+                    <span>Resume</span>
+                </button>
+            </div>
+        </div>
     </section>
-    <section class="menu">
-        <div class="menu-wrap">
-            <ul class="sidebarLinks">
-                <li class="sidebar-item"><i class="fa fa-home"></i><a href="#home">Home</a></li>
-                <li class="sidebar-item"><i class="fa fa-id-card"></i><a href="#about">About</a></li>
-                <li class="sidebar-item"><i class="fa fa-cubes-stacked"></i><a href="#projects">Projects</a></li>
-                <li class="sidebar-item"><i class="fa fa-phone"></i><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="side-footer">
-                <div class="logo">
-                    <img src="profile.png">
-                    <h3>PRAFUL DAKSH</h3>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span>About Me</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-600 to-red-600 mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-left">
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="mb-6">
+                            I am Praful - a passionate BCA student pursuing my career in web development.
+                            I have a strong background in front-end technologies like HTML, CSS, JavaScript,
+                            and React.js, as well as back-end technologies including Node.js, Express.js, and MongoDB.
+                        </p>
+                        <p class="mb-6">
+                            I have expertise in building user-friendly and responsive applications.
+                            I also have knowledge of C and C++, which helps me enhance my problem-solving
+                            capabilities and logical reasoning ability.
+                        </p>
+                        <p class="mb-6">
+                            I am eager to contribute to innovative projects in collaborative environments
+                            where my skills as a full-stack developer can be honed and expanded.
+                        </p>
+                        <p class="font-semibold text-blue-600">
+                            I'm open to job opportunities where I can contribute, learn, and grow.
+                            If you have a good opportunity that matches my skills and experience,
+                            don't hesitate to contact me.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="animate-slide-right">
+                    <h3 class="text-2xl font-bold mb-8 text-center">Education Journey</h3>
+                    <div class="relative space-y-8">
+                        <div class="timeline-item relative pl-8">
+                            <div
+                                class="absolute left-0 top-2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg">
+                            </div>
+                            <div class="card p-6">
+                                <h4 class="font-bold text-lg text-green-600 mb-2">High School</h4>
+                                <p class="text-gray-600 font-medium mb-1">Completed in 2021</p>
+                                <p class="text-gray-500 text-sm">Officers International School</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item relative pl-8">
+                            <div
+                                class="absolute left-0 top-2 w-4 h-4 bg-purple-600 rounded-full border-4 border-white shadow-lg">
+                            </div>
+                            <div class="card p-6">
+                                <h4 class="font-bold text-lg text-purple-600 mb-2">Intermediate Studies</h4>
+                                <p class="text-gray-600 font-medium mb-1">Completed in 2023</p>
+                                <p class="text-gray-500 text-sm">SG Inter College</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item relative pl-8">
+                            <div
+                                class="absolute left-0 top-2 w-4 h-4 bg-green-600 rounded-full border-4 border-white shadow-lg">
+                            </div>
+                            <div class="card p-6">
+                                <h4 class="font-bold text-lg text-blue-600 mb-2">Bachelor's Degree</h4>
+                                <p class="text-gray-600 font-medium mb-1">Pursuing BCA</p>
+                                <p class="text-gray-500 text-sm">Vishveshwarya Institute of Engineering and Technology
+                                    (2023-2026)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold text-center mb-5">
+                    <span>My Skills</span>
+                </h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-600 to-red-600 mx-auto mb-12"></div>
+                <div class="skills-container overflow-hidden relative">
+                    <div class="skills-slider flex space-x-4">
+                        <span class="skill-tag border p-2">HTML5</span>
+                        <span class="skill-tag border p-2">CSS3</span>
+                        <span class="skill-tag border p-2">JavaScript</span>
+                        <span class="skill-tag border p-2">React.js</span>
+                        <span class="skill-tag border p-2">Node.js</span>
+                        <span class="skill-tag border p-2">Express.js</span>
+                        <span class="skill-tag border p-2">MongoDB</span>
+                        <span class="skill-tag border p-2">C</span>
+                        <span class="skill-tag border p-2">C++</span>
+                        <span class="skill-tag border p-2">Bootstrap</span>
+                        <span class="skill-tag border p-2">Git</span>
+                        <span class="skill-tag border p-2">GitHub</span>
+                        <span class="skill-tag border p-2">HTML5</span>
+                        <span class="skill-tag border p-2">CSS3</span>
+                        <span class="skill-tag border p-2">JavaScript</span>
+                        <span class="skill-tag border p-2">React.js</span>
+                        <span class="skill-tag border p-2">Node.js</span>
+                        <span class="skill-tag border p-2">Express.js</span>
+                        <span class="skill-tag border p-2">MongoDB</span>
+                        <span class="skill-tag border p-2">C</span>
+                        <span class="skill-tag border p-2">C++</span>
+                        <span class="skill-tag border p-2">Bootstrap</span>
+                        <span class="skill-tag border p-2">Git</span>
+                        <span class="skill-tag border p-2">GitHub</span>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
-    <section class="hero" id="home">
-        <div class="main">
-            <h1>HEY, I'M PRAFUL DAKSH</h1>
-            <p>
-                I am eager to contribute to innovative projects
-                with collaborative environments where my skills as a full stack developer can be honed.
+
+    <section class="projects-section" id="projects">
+        <div class="text-center mb-16">
+            <h2 class="projects-title">Featured Projects</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-yellow-600 to-red-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+                Explore my latest work and projects that showcase my skills in web development
             </p>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/praful-daksh-30868b2b6/" target="_self"><i
-                        class="fa-brands fa-linkedin" title="LinkedIn"></i></a>
-                <a href="https://github.com/Praful-Daksh" target="_self" title="GitHub"><i
-                        class="fa-brands fa-github"></i></a>
-                <a href="https://codolio.com/profile/praful" target="_self" title="LeetCode"><i
-                        class="fa-solid fa-code"></i></a>
-                <a href="mailto:prafuldaksh@gmail.com" target="_blank" title="Mail"><i
-                        class="fa-solid fa-envelope"></i></a>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-card" style="background-image: url('showtime.png');">
+                <div class="project-overlay"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Event Management</h3>
+                    <p class="project-description">
+                        A event management site with the features to publish, organise and manage events.
+                    </p>
+                    <a href="https://show-time-six.vercel.app" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View Project →
+                    </a>
+                </div>
             </div>
-            <button id="downloadButton" title="Download Resume">resume </button>
+
+            <div class="project-card" style="background-image: url('styledg.png');">
+                <div class="project-overlay"></div>
+                <div class="project-info">
+                    <h3 class="project-title">E Commerce Web</h3>
+                    <p class="project-description">
+                        A Shopping platform with functional cart and user login and sign in features.
+                    </p>
+                    <a href="https://praful-daksh.github.io/StyleEdg/" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View Project →
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" style="background-image: url('quiz.png');">
+                <div class="project-overlay"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Quiz Application</h3>
+                    <p class="project-description">
+                        Quiz web app with variety of quiz fields with your own modification of questions.
+                    </p>
+                    <a href="https://praful-daksh.github.io/QuizMaster/" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View Project →
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" style="background-image: url('typing.png');">
+                <div class="project-overlay"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Typing Test</h3>
+                    <p class="project-description">
+                        Typing test web application that measures your typing speed with various paragraphs in different
+                        amounts of time.
+                    </p>
+                    <a href="https://praful-daksh.github.io/Typing-Test/" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View Project →
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" style="background-image: url('tic.png');">
+                <div class="project-overlay"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Tic Tac Toe</h3>
+                    <p class="project-description">
+                        One of the most popular board games on web, can be played against computer or friends.
+                    </p>
+                    <a href="https://praful-daksh.github.io/TIC-TAC-TOE/" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View Project →
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="about" id="about">
-        <div class="about-wrap">
-            <h1> About Me</h1>
-            <p>I am Praful-a passionate BCA student pursuing my career in web development. I have a strong background in
-                front-end technologies like HTML, CSS, and JavaScript and ReactJs and back-end(NodeJs,
-                ExpressJs,Mongodb). I have expertise in
-                building user-friendly and responsive applications.
-                <br> I also have the knowledge of C and C++. This helps
-                me in enhancing my problem-solving capabilities and my logical reasoning ability.I am eager to
-                contribute to innovative projects with collaborative environments where my skills as a full stack
-                developer can be honed.
-            </p>
-            <p>I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that
-                matches my skills and experience then don't hesitate to contact me.
-            </p>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content">
-                    <h3>High School </h3>
-                    <p>Completed in 2021 from Officers International School.</p>
-                </div>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span>Get In Touch</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-600 to-red-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Ready to start your next project? Let's work together and create something amazing!
+                </p>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content">
-                    <h3>Intermediate Studies</h3>
-                    <p>Completed in 2023 from SG Inter College.</p>
-                </div>
-            </div>
+            <div class="max-w-2xl mx-auto">
+                <form class="card p-8 animate-fade-up" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="162bf5bc-06df-426a-b944-a8a95eb3c4f1">
+                    <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+                    <input type="hidden" name="from_name" value="Praful Daksh Portfolio">
 
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content">
-                    <h3>Bachelor's Degree</h3>
-                    <p>Pursuing BCA from Vishveshwarya Institue of Engeneering and Technology for the time span
-                        2023-2026.</p>
-                </div>
-            </div>
-        </div>
-        <div class="skill-head">
-            <h1>My Skills</h1>
-        </div>
-        <div class="skills">
-            <div class="skill-slider">
-                <button class="slider-item">HTML</button>
-                <button class="slider-item">CSS</button>
-                <button class="slider-item">JavaScript</button>
-                <button class="slider-item">C</button>
-                <button class="slider-item">C++</button>
-                <button class="slider-item">Bootstrap</button>
-                <button class="slider-item">Node.js</button>
-                <button class="slider-item">Express.js</button>
-                <button class="slider-item">MongoDB</button>
-                <button class="slider-item">Git</button>
-                <button class="slider-item">GitHub</button>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <h1>Projects</h1>
-        <div class="projects-wrap">̥
-            <div class="project5 project">
-                <div class="project-info">
-                    <h1>Event Managment</h1>
-                    <p>A event Managment site with the features to publish, organise and manage events.</p>
-                    <a href="https://show-time-six.vercel.app">View Project -></a>
-                </div>
-            </div>
-            <div class="project4 project">
-                <div class="project-info">
-                    <h1>E Commerce Web</h1>
-                    <p>A Shopping platform with functional cart and user login and sign in features.</p>
-                    <a href="https://praful-daksh.github.io/StyleEdg/">View Project -></a>
-                </div>
-            </div>
-            <div class="project3 project">
-                <div class="project-info">
-                    <h1>Quiz</h1>
-                    <p>Quiz web app with variety of quiz fields with your own modification of question.</p>
-                    <a href="https://praful-daksh.github.io/QuizMaster/">View Project -></a>
-                </div>
-            </div>
-            <div class="project2 project">
-                <div class="project-info">
-                    <h1>Typing Test</h1>
-                    <p>Typing test web applicaton that measures your typing speed with various paragaraphs in diffrent
-                        amount of time</p>
-                    <a href="https://praful-daksh.github.io/Typing-Test/">View Project -></a>
-                </div>
-            </div>
-            <div class="project1 project">
-                <div class="project-info">
-                    <h1>Tic Tac Toe</h1>
-                    <p>one of the most popular board games on web , can be played against computer or friends</p>
-                    <a href="https://praful-daksh.github.io/TIC-TAC-TOE/">View Project -></a>
-                </div>
-            </div>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                                placeholder="Your full name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
+                                Address</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                                placeholder="your.email@example.com">
+                        </div>
+                    </div>
 
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                            placeholder="Tell me about your project or just say hello!"></textarea>
+                    </div>
 
+                    <button type="submit" class="w-full btn-primary inline-flex items-center justify-center space-x-2">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="text-center animate-fade-up" style="animation-delay: 0.1s;">
+                        <a href="mailto:prafuldaksh@gmail.com">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
+                        </a>
+                        <h4 class="font-semibold text-gray-800 mb-2">Email</h4>
+                        <p class="text-gray-600">prafuldaksh@gmail.com</p>
+                    </div>
+                    <div class="text-center animate-fade-up" style="animation-delay: 0.2s;">
+                        <a href="https://www.linkedin.com/in/praful-daksh-30868b2b6/" target="_blank"
+                            rel="noopener noreferrer">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-linkedin text-green-600 text-xl"></i>
+                            </div>
+                        </a>
+                        <h4 class="font-semibold text-gray-800 mb-2">LinkedIn</h4>
+                        <p class="text-gray-600">Connect with me</p>
+                    </div>
+                    <div class="text-center animate-fade-up" style="animation-delay: 0.3s;">
+                        <a href="https://github.com/Praful-Daksh" target="_blank" rel="noopener noreferrer">
+                            <div
+                                class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-github text-purple-600 text-xl"></i>
+                            </div>
+                        </a>
+                        <h4 class="font-semibold text-gray-800 mb-2">GitHub</h4>
+                        <p class="text-gray-600">View my code</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="contact-section" id="contact">
-        <div class="contact-intro">
-            <h2 class="contact-title">Get in Touch</h2>
-            <p class="contact-description">
-                Fill out the form below and I'll get back to you as soon as possible.
-            </p>
-        </div>
 
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-6">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">PD</span>
+                    </div>
+                    <h3 class="text-2xl font-bold">Praful Daksh</h3>
+                </div>
 
-            <input type="hidden" name="access_key" value="162bf5bc-06df-426a-b944-a8a95eb3c4f1" />
-            <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-            <input type="hidden" name="from_name" value="My Website" />
-            <div class="form-group-container">
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+                <p class="text-gray-400 mb-8 max-w-md mx-auto">
+                    Passionate about creating digital experiences that make a difference.
+                    Let's build something amazing together!
+                </p>
+
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.linkedin.com/in/praful-daksh-30868b2b6/" target="_blank"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+                        aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Praful-Daksh" target="_blank"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors duration-300"
+                        aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://codolio.com/profile/praful" target="_blank"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300"
+                        aria-label="Coding Profile">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="mailto:prafuldaksh@gmail.com"
+                        class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-300"
+                        aria-label="Send Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+
+                <div class="border-t border-gray-800 pt-6">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 Praful Daksh. Made with ❤️ and lots of ☕
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
-                </div>
-            </div>
-            <button class="form-submit" type="submit">Send Message</button>
-        </form>
-    </section>
-    <footer class="footer">
-        <div class="footer-content">
-            <p> Made by Praful Daksh</p>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/praful-daksh-30868b2b6/" target="_self"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Praful-Daksh" target="_self"><i class="fa-brands fa-github"></i></a>
-                <a href="https://leetcode.com/u/prafuldaksh/" target="_self"><i class="fa-solid fa-code"></i></a>
-                <a href="mailto:prafuldaksh@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
-</body>
-<script>
-    const carousel = document.querySelector('.skill-slider');
-    const items = document.querySelectorAll('.slider-item');
-
-    items.forEach(item => {
-        const clone = item.cloneNode(true);
-        carousel.appendChild(clone);
-    });
-    const sideBar = document.querySelector('.menu');
-    const sidebarItem = document.querySelectorAll('.sidebar-item');
-    const toggleBtn = document.getElementById('bars');
-    const web = document.querySelector('html');
-
-    toggleBtn.addEventListener('click', sidebar);
-    function sidebar() {
-        sideBar.style.right = 0;
-        web.style.overflowY = "hidden";
-    }
-    function closeSidebar() {
-        sideBar.style.right = '-100%';
-        web.style.overflowY = "scroll";
-    }
-
-    sidebarItem.forEach(item => {
-        item.addEventListener('click', () => {
-            closeSidebar();
-        })
-    })
-    document.addEventListener('click', (e) => {
-        if (!sideBar.contains(e.target) && e.target !== toggleBtn) {
-            closeSidebar();
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
         }
 
+        function downloadResume() {
+            try {
+                const fileUrl = "./Praful-Daksh.pdf";
+                const link = document.createElement("a");
+                link.href = fileUrl;
+                link.download = "Praful-Daksh-Resume.pdf";
+                link.click();
+            } catch (error) {
+                console.error('Error downloading resume:', error);
+                window.open('mailto:prafuldaksh@gmail.com?subject=Resume Request&body=Hello, I would like to request your resume.');
+            }
+        }
 
-        document.getElementById("downloadButton").addEventListener("click", function () {
-            const fileUrl = "./Praful-Daksh.pdf";
-            const a = document.createElement("a");
-            a.href = fileUrl;
-            a.download = fileUrl.split('/').pop();
-            a.click();
+        document.addEventListener('DOMContentLoaded', function () {
+            const downloadButton = document.getElementById('downloadButton');
+            if (downloadButton) {
+                downloadButton.addEventListener('click', downloadResume);
+            }
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.offsetTop;
+                        const offsetPosition = elementPosition - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            document.addEventListener('click', function (event) {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const menuButton = event.target.closest('button[onclick="toggleMobileMenu()"]');
+
+                if (!mobileMenu.contains(event.target) && !menuButton && mobileMenu.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            });
+
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.innerHTML;
+
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                    submitButton.disabled = true;
+
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText;
+                        submitButton.disabled = false;
+                    }, 3000);
+                });
+            }
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-up');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.card, .project-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    if (mobileMenu.classList.contains('active')) {
+                        toggleMobileMenu();
+                    }
+                }
+            });
+
+            document.querySelectorAll('a, button, input, textarea').forEach(element => {
+                element.addEventListener('focus', function () {
+                    this.style.outline = '2px solid #3b82f6';
+                    this.style.outlineOffset = '2px';
+                });
+
+                element.addEventListener('blur', function () {
+                    this.style.outline = 'none';
+                });
+            });
         });
-    })
-
-
-</script>
+    </script>
+</body>
 
 </html>
