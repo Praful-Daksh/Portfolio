@@ -48,7 +48,7 @@ body {
 
 @keyframes slideInFromLeft {
     0% {
-        opacity: 0;
+        opacity: 0.5;
         transform: translateX(-50px);
     }
 
